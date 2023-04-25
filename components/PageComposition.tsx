@@ -30,6 +30,8 @@ export default function PageComposition({
     apiUrl: "/api/preview",
   });
 
+  console.log(`composition: ${composition}`)
+
   const { metaTitle } = composition?.parameters || {};
   return (
     <>
@@ -44,6 +46,7 @@ export default function PageComposition({
           contextualEditingEnhancer={contextualEditingEnhancer}
         >
           <UniformSlot name="content" />
+          <UniformSlot name="testNikolai" />
         </UniformComposition>
         <ToggleEmbeddedContextDevTools
           initialSettings={{

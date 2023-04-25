@@ -10,6 +10,7 @@ export const getStaticProps = withUniformGetStaticProps({
   param: "slug",
   preview: process.env.NODE_ENV === "development",
   callback: async (context, composition) => {
+    console.log('composition', composition)
     if (composition) {
       await runEnhancers(composition, context);
     } else {
