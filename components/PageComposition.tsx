@@ -46,7 +46,7 @@ export default function PageComposition({
           contextualEditingEnhancer={contextualEditingEnhancer}
         >
           <UniformSlot name="content" />
-          <UniformSlot name="testNikolai" />
+          <UniformSlot name="peterTest" />
         </UniformComposition>
         <ToggleEmbeddedContextDevTools
           initialSettings={{
