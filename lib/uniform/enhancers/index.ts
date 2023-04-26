@@ -6,9 +6,9 @@ import {
 import { GetStaticPropsContext } from "next";
 
 // TODO: to enable contentful enhancers:
-//import { CANVAS_CONTENTFUL_PARAMETER_TYPES } from "@uniformdev/canvas-contentful";
+import { CANVAS_CONTENTFUL_PARAMETER_TYPES } from "@uniformdev/canvas-contentful";
 
-// import getContentfulEnhancer from "./contentful";
+import getContentfulEnhancer from "./contentful";
 
 export default async function runEnhancers(
   composition: any,
@@ -17,13 +17,13 @@ export default async function runEnhancers(
   const { preview } = context || {};
   //TODO: register your CMS specific enhancers here
   // see docs: https://docs.uniform.app/canvas/tutorials/enhancers
-  // await enhance({
-  //   composition,
-  //   enhancers: new EnhancerBuilder().parameterType(
-  //     CANVAS_CONTENTFUL_PARAMETER_TYPES,
-  //     getContentfulEnhancer(preview!)
-  //   ),
-  //   context,
-  // });
+  await enhance({
+    composition,
+    enhancers: new EnhancerBuilder().parameterType(
+      CANVAS_CONTENTFUL_PARAMETER_TYPES,
+      getContentfulEnhancer(preview!)
+    ),
+    context,
+  });
   return composition;
 }
