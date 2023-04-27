@@ -2,6 +2,9 @@
 const nextConfig = {
   transpilePackages: ['@storefront-ui/react'],
   reactStrictMode: true,
+  images: {
+    unoptimized: true
+  },
   serverRuntimeConfig: {
     projectId: process.env.UNIFORM_PROJECT_ID,
     apiKey: process.env.UNIFORM_API_KEY,
