@@ -18,9 +18,9 @@ import ContentfulDrawer from "./ContenfulDrawer";
     return (
       <>
      <div className="w-full flex flex-col py-4">
-      <div className="flex-1 mb-6">
+      {/* <div className="flex-1 mb-6">
         <DogeBanner uniformVal={uniformValueTest} />
-      </div>
+      </div> */}
       <div className="flex justify-center mb-6">
       <ContentfulDrawer contentfulValueTest={contentfulValueTest?.fields}/>
       </div>

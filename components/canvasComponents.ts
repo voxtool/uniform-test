@@ -2,3 +2,5 @@
 
 import "./Hero";
 import "./PeterTest";
+import "./CustomArticleLeft";
+import "./CustomArticleRight";
